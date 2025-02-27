@@ -62,7 +62,8 @@ alias cduu='cd ../..'
 alias cduuu='cd ../../..'
 
 # frequently used commands: system
-alias upgrade='sudo dnf upgrade --refresh -y && sudo dnf autoremove -y && flatpak upgrade -y'
+alias upgrade='sudo dnf upgrade --exclude=kernel* --refresh -y && sudo dnf autoremove -y && flatpak upgrade -y'
+alias upgrade-kernel='sudo dnf upgrade --refresh -y'
 alias fetch='neofetch --off'
 
 # frequently used commands: files and folders
@@ -88,6 +89,9 @@ alias vv='LD_PRELOAD=/path/to/hide-menubar.so virt-viewer'
 alias f40='sudo virsh start fedora40 && sudo LD_PRELOAD=~/src/hide-menubar/hide-menubar.so virt-viewer fedora40'
 alias vf40='sudo LD_PRELOAD=~/src/hide-menubar/hide-menubar.so virt-viewer fedora40'
 alias sf40='sudo virsh shutdown fedora40'
+
+alias gcloud-pub='ssh -i ~/.ssh/shared-key shared-access-key@34.59.33.66'
+alias gcloud-dev='ssh -i ~/.ssh/shared-key-dev shared-access-key@34.57.18.232'
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/prestonharberts/.bin/google-cloud-sdk/path.bash.inc' ]; then . '/home/prestonharberts/.bin/google-cloud-sdk/path.bash.inc'; fi
