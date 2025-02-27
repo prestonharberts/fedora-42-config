@@ -24,7 +24,6 @@ Change the following settings:
   - Tab Size: 2
   - Word Wrap: On
   - Wrapping Indent: indent
-  - HTML > Format: Wrap Line Length: 0
   - Font
     - Font Family: Insert `'SF Mono', ` at the beginning after following the instructions in `sf-font.md`
     - Font Size: 12
@@ -53,6 +52,10 @@ Change the following settings:
   - Terminal
     - Integrated: Font Family: `'SF Mono'`
     - Integrated: Font Size: 13
+- HTML
+  - Format: Wrap Line Length: 0
+  - Auto Closing Tags: Off
+  - Auto Create QUotes: Off
 
 Install the Fedora GNOME light & dark themes extension by olifink, and change the following settings:
 
@@ -63,6 +66,7 @@ Install the Fedora GNOME light & dark themes extension by olifink, and change th
     - Preferred Light Color Theme: Gnome Light (GitHub)
 
 Install the following extensions:
+
 - Active File In StatusBar by RoscoP
 - Bash IDE by mads-hartmann
 - Codeium: AI Coding Autocomplete and Chat for Python, Javascript, Typescript, Java, God, and more by Codeium
@@ -75,6 +79,7 @@ Install the following extensions:
 - VSCode Neovim extension by asvetliakov
 - clangd by llvm-vs-code-extensions (install clangd when propted; you may have to open a .cpp file first in which case also press `Ctrl+Shift+P` and enter "clangd: Toggle inlay hints")
 - statusbar-commands by anweber
+- Indent one space by SirTori
 
 Open the Codeium website when prompted, sign in, close the notification in VSCodium, and open the website when prompted again. Copy the authentication token, and the press `CTRL-P` in VSCodium, then search for `Codeium: Provide Authentication Token`. Paste the copied token and press enter.
 
@@ -158,6 +163,11 @@ Change `-1` to `1` in `~/.vscode-oss/extensions/roscop.activefileinstatusbar-1.0
 ```
 var sb = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 1);
 ```
+
+Change the following Indenticator settings:
+
+- Indenticator Inner Width: 0.5
+- Indenticator Width: 0.5
 
 Restart VSCodium for some changes to take effect.
 
