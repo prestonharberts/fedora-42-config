@@ -9,7 +9,7 @@ sudo dnf install vulkan-loader vulkan-loader.i686 vulkan vulkan-tools intel-medi
 (Only for desktop. I use default drivers for battery devices) Run the following if you plan to use your NVIDIA GPU:
 
 ```
-sudo dnf install xorg-x11-drv-nvidia akmod-nvidia libva-nvidia-driver kmod-nvidia nvidia-modprobe nvidia-persistenced xorg-x11-drv-nvidia-libs xorg-x11-drv-nvidia-power xorg-x11-drv-nvidia-xorg-libs xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-cuda-libs -y
+sudo dnf install xorg-x11-drv-nvidia akmod-nvidia libva-nvidia-driver kmod-nvidia nvidia-modprobe nvidia-persistenced xorg-x11-drv-nvidia-libs xorg-x11-drv-nvidia-power xorg-x11-drv-nvidia-xorg-libs xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-cuda-libs xorg-x11-xinit -y
 ```
 
 ## Switch to Xorg
@@ -59,8 +59,8 @@ uname -r
 Install the kernel development tools with this command, replacing the kernel version with those found with the previous command:
 
 ```
-sudo dnf install kernel-devel-X.X.X-XXX.fcXX.x86_64
-sudo dnf install kernel-headers-X.XX.X-XXX.fc41.x86_64
+sudo dnf install kernel-devel-X.XX.X-XXX.fcXX.x86_64
+sudo dnf install kernel-headers-X.XX.X-XXX.fcXX.x86_64
 ```
 
 
@@ -70,3 +70,4 @@ Run the following to save and reboot:
 sudo akmods --force
 sudo dracut --force
 sudo reboot
+```
