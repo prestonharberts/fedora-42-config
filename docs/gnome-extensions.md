@@ -136,10 +136,10 @@ Change the following settings for the Built-In extensions:
   - Unpin all current dock apps, and pin the following apps in order:
     - Firefox
     - Obsidian
-    - Todoist
     - Konsole
     - Files
     - Tutanota
+    - Todoist
     - Google Calendar
     - Tidal
     - Rhythmbox
@@ -194,6 +194,12 @@ Change the following settings for the Built-In extensions:
       - MPRIS: Off
       - Notifications: Off
 - Hide the dock in overview by Roslax
+- Hide Top Bar by tuxor1337 (currently disabled)
+  - Sensitivity
+    - Show panel when mouse approches edge of the screen: On
+  - Intellihide
+    - Only hide the panel when a window takes the space: Off
+    - Only when the active window takes the space: Off
 - Just Perfection by JustPerfection
   - Visibility
     - Activities Button: Off
@@ -253,25 +259,27 @@ Change the following settings for the Built-In extensions:
   - Default profiles
     - On AC: Balanced
     - On battery: Power Saving
-- QSTweak - Quick Setting Tweaker by qwreey
-  - Volume Mixer
-    - Add volume mixer (PuseAudio, Pipewire): Off
-  - Noti&Media
-    - Media Controls Widget: Off
-    - Notification Widget: Off
-  - Quick Toggles
-    - Add more buttons
-      - DND Quick Toggle: Off
-    - Buttons to remove
-      - St_BoxLayout: On
-      - BrightnesItem: On
-      - NighLightToggle: On
-      - DarkModeToggle: On
-      - KeyboardBrightnessToggle: On
-      - RfkillToggle: On
-      - BackgroundAppsToggle: On
-      - MediaSection: On
-      - Notifications: On
+- Quick Settings Tweaks
+  - Widgets
+    - Media Widget: Off
+    - Notifications Widget: Off
+    - Weather Widget: Off
+    - Volume mixer Widget: Off
+  - Toggles
+    - DND Quick Toggle: Off
+  - Layout
+    - Quick Toggles Layout
+      - Ordering and Hiding: On
+        - Mobile Connections: Hide
+        - Bluetooth Tethers: Hide
+        - Night Light: Hide
+        - Dark Style: Hide
+        - Keyboard Backlight: Hide
+        - Airplane Mode: Hide
+    - System Indicators
+      - Accent screen sharing indicator: On
+      - Accent screen recording indicator: On
+      - Privacy indicators style: Accent 
 - Quick Settings Audio Devices Hider by marcinjahn
   - Outputs
     - Output Audio Devices
@@ -305,6 +313,7 @@ Change the following settings for the Built-In extensions:
       - Internal Microphone - Built-in Audio: Dell XPS
       - Rear Microphone - Built-in Audio: Line In
       - Front Microphone - Built-in Audio: Microphone In
+- Respect Do Not Disturb by farodriguess
 - Rounded Corners by lennart-k (disable if using multiple monitors)
   - General settings
     - Border radius: 14px
