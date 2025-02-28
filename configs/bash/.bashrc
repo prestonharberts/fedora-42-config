@@ -2,12 +2,12 @@
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-  . /etc/bashrc
+    . /etc/bashrc
 fi
 
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
-  PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 export PATH
 
@@ -16,11 +16,11 @@ export PATH
 
 # User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
-  for rc in ~/.bashrc.d/*; do
-    if [ -f "$rc" ]; then
-      . "$rc"
-    fi
-  done
+    for rc in ~/.bashrc.d/*; do
+        if [ -f "$rc" ]; then
+            . "$rc"
+        fi
+    done
 fi
 
 export PATH=/home/prestonharberts/Bin/:$PATH
@@ -63,7 +63,7 @@ alias cduuu='cd ../../..'
 
 # frequently used commands: system
 alias upgrade='sudo dnf upgrade --exclude=kernel* --refresh -y && sudo dnf autoremove -y && flatpak upgrade -y'
-alias upgrade-kernel='sudo dnf upgrade --refresh -y'
+alias upgrade-kernel='sudo dnf upgrade --refresh'
 alias fetch='neofetch --off'
 
 # frequently used commands: files and folders
@@ -71,7 +71,7 @@ alias csc='cd ~/Documents/school/classes/csc/'
 alias obsidian='cd ~/Documents/obsidian/'
 alias .obsidian='cd ~/Documents/obsidian/.obsidian/'
 alias snippets='cd ~/Documents/obsidian/.obsidian/snippets/'
-alias fedora='cd ~/Repos/fedora-41-configuration/'
+alias fedora='cd ~/Repos/fedora-40-configuration/'
 alias bg2ob='cd ~/Repos/biblegateway-to-obsidian/'
 alias pwa='cd /home/prestonharberts/.local/share/firefoxpwa/profiles/00000000000000000000000000'
 
@@ -86,9 +86,9 @@ alias gitps='git push'
 
 # frequently used commands: vm
 alias vv='LD_PRELOAD=/path/to/hide-menubar.so virt-viewer'
-alias f41='sudo virsh start fedora41 && sudo LD_PRELOAD=~/src/hide-menubar/hide-menubar.so virt-viewer fedora41'
-alias vf41='sudo LD_PRELOAD=~/src/hide-menubar/hide-menubar.so virt-viewer fedora41'
-alias sf41='sudo virsh shutdown fedora41'
+alias f40='sudo virsh start fedora40 && sudo LD_PRELOAD=~/src/hide-menubar/hide-menubar.so virt-viewer fedora40'
+alias vf40='sudo LD_PRELOAD=~/src/hide-menubar/hide-menubar.so virt-viewer fedora40'
+alias sf40='sudo virsh shutdown fedora40'
 
 alias gcloud-pub='ssh -i ~/.ssh/shared-key shared-access-key@34.59.33.66'
 alias gcloud-dev='ssh -i ~/.ssh/shared-key-dev shared-access-key@34.57.18.232'
