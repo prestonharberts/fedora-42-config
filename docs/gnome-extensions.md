@@ -349,7 +349,6 @@ Change the following settings for the Built-In extensions:
           - Calendar (Google Calendar)
           - Coding (Sigil, VSCodium)
           - Drawing (Inkscape, LibreOffice Draw)
-          - GPT (ChatGPT)
           - Hypervisor (Virtual Machine Manager)
           - Mail (Tuta Mail)
           - Messages (Discord)
