@@ -1,4 +1,4 @@
-# Preston's Fedora 41 Config
+# Fedora 41 Config
 
 This is my Fedora 41 Linux configuration with all my installed apps and how to configure them. Here I also keep track of what commands and system files I run or edit that change how my environment functions.
 
