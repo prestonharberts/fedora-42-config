@@ -25,7 +25,8 @@ Now, change the following settings under Configure Konsole:
     - General
       - General Settings
         - Default profile: On
-        - Initial terminal size: 80 columns; 30 rows
+        - Initial terminal size: 84 columns; 30 rows
+        - I use 84 columns because the first 4 are taken up by the gutter in my Neovim config
         - Terminal bell mode: System Bell
     - Tabs
       - Tab titles
