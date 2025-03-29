@@ -51,9 +51,7 @@ alias g='gio open'
 alias p='xclip -sel c'
 alias z='zathura --fork'
 
-alias n='nvim'
 alias v='nvim'
-alias vi='nvim'
 
 # frequently used commands: navigation
 alias cls='clear && ls'
@@ -71,7 +69,7 @@ alias csc='cd ~/Documents/school/classes/csc/'
 alias obsidian='cd ~/Documents/obsidian/'
 alias .obsidian='cd ~/Documents/obsidian/.obsidian/'
 alias snippets='cd ~/Documents/obsidian/.obsidian/snippets/'
-alias fedora='cd ~/Repos/fedora-41-configuration/'
+alias fedora='cd ~/Repos/fedora-41-config/'
 alias bg2ob='cd ~/Repos/biblegateway-to-obsidian/'
 alias pwa='cd /home/prestonharberts/.local/share/firefoxpwa/profiles/00000000000000000000000000'
 
