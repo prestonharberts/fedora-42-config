@@ -6,6 +6,14 @@ Run the following to install the GitHub CLI program:
 sudo dnf install gh -y
 ```
 
+Run the following to setup `gh`:
+
+```
+git auth login
+<GitHub.com>
+<SSH>
+```
+
 Run the following to create a public key ([source](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)):
 
 ```
