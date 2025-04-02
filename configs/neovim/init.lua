@@ -181,6 +181,7 @@ vim.cmd([[
   Plug 'hrsh7th/cmp-path'
   Plug 'hrsh7th/cmp-nvim-lsp'
   Plug 'hrsh7th/cmp-buffer'
+  Plug 'numToStr/Comment.nvim'
 
   Plug 'Mofiqul/adwaita.nvim'   " theme
 
@@ -375,4 +376,32 @@ end
 -- Use an autocommand to refresh the highlight on CursorHold and DiagnosticChanged
 vim.api.nvim_create_autocmd({ "CursorHold", "DiagnosticChanged" }, {
   callback = highlight_diagnostics,
+})
+
+
+-- Create an augroup for large files
+vim.api.nvim_create_augroup("LargeFile", { clear = true })
+
+-- Define the size threshold for large files (10MB)
+local large_file_size = 10485760
+
+-- Define an autocmd to handle large files
+vim.api.nvim_create_autocmd("BufReadPre", {
+    group = "LargeFile",
+    callback = function()
+        local file = vim.fn.expand("<afile>")
+        local filesize = vim.fn.getfsize(file)
+
+        if filesize > large_file_size then
+            -- Apply settings for large files
+            vim.cmd("set eventignore+=FileType")
+            vim.opt_local.swapfile = false
+            vim.opt_local.bufhidden = "unload"
+            vim.opt_local.buftype = "nowrite"
+            vim.opt_local.undolevels = -1
+        else
+            -- Remove the eventignore for FileType
+            vim.cmd("set eventignore-=FileType")
+        end
+    end
 })
