@@ -52,6 +52,7 @@ alias p='xclip -sel c'
 alias z='zathura --fork'
 
 alias v='nvim'
+alias vi='nvim'
 
 # frequently used commands: navigation
 alias cls='clear && ls'
