@@ -272,11 +272,12 @@ Follow the instructions presented by this extension when prompted. Make web apps
   - Prime video
     - Icon URL: https://img.icons8.com/?size=100&id=mJTj7Q9EPSVn&format=png&color=000000
 
-Now, sign in to your Firefox account to sync extensions. Sign out of your account once everything is synced, restart the app, and uninstall these extension:
+Now, sign in to your Firefox account to sync extensions. Sign out of your account once everything is synced, restart the app, and uninstall everything but these extensions:
 
 - Bitwarden - Free Password Manager 
 - Cookie AutoDelete 
 - CSS Override by swcolegrove
+- Enter Key For AI by SuperJohn
 - Return YouTube Dislike 
 - SponsorBlock - Skip Sponsorships on YouTube 
 - uBlock Origin 
