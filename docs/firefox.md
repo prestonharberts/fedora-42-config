@@ -85,16 +85,19 @@ Right click an empty space on the Bookmarks toolbar. Change the following settin
 Open Settings, and click the Extensions & Themes button at the bottom. Under the Extensions tab, click "Find more add-ons." Search and install the following extensions and change each ones respective shortcuts in `about:addons`:
 
 - Bitwarden - Free Password Manager by Bitwarden Inc.
-  - Open vault popup: Alt+L
+  - Open vault popup shortcut: Alt+L
+- ChatGPT Bulk Delete by User_425
 - Cookie AutoDelete by CAD Team
 - CSS Override by swcolegrove
+- Enter Key For AI by SuperJohn
+  - Rate us and Provide Feedback shortcut: None
 - OneTab by OneTab Team
 - Progressive Web Apps by Filip S
 - Return YouTube Dislike by Dmitry Selivanov
 - SingleFile by gildas to Firefox
 - SponsorBlock - Skip Sponsorships on YouTube by Ajay Ramachandran
 - Todoist for Firefox by Todoist
-  - Add to Todoist: Alt+A
+  - Add to Todoist shortcut: Alt+A
 - TWP - Translate Web Pages by Filipe Dev
 - uBlock Origin by Raymond Hill
 	- When prompted, allow to run in private windows
@@ -328,7 +331,7 @@ Now, open `about:config`, and set `toolkit.legacyUserProfileCustomizations.style
 media.ffmpeg.vaapi.enabled = true
 media.ffvpx.enabled = false
 media.rdd-vpx.enabled = false
-screenshots.browser.component.enabled = false
+extensions.screenshots.disabled = true
 ```
 
 ## Netflix 1080p
