@@ -184,3 +184,13 @@ Change the following shortcuts:
 - codeium.supercompleteAccept: `Ctrl+Enter`
 
 Open VSCode Neovim's settings, and add `q` to "Ctrl Keys For Insert Mode" and "Ctrl Keys For Normal Mode"
+
+ Open the user settings JSON, and add the following:
+
+ ```
+   "liveServer.settings.ignoreFiles": [
+     "**/*.db",
+     "**/*.db~",
+     "**/*.db-journal",
+    ],
+```
