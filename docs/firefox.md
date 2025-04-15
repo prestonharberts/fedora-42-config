@@ -267,6 +267,7 @@ Follow the instructions presented by this extension when prompted. Make web apps
 - https://play.qobuz.com (if subscribed)
   - Name: Qobuz
   - Icon URL: https://external-content.duckduckgo.com/ip3/www.qobuz.com.ico
+- https://mail.tutanota.com/mail/
 - https://youtube.com
 - TODO: Add URLs for these too `Crunchyroll, Disney+, Hulu, Max, Netflix, Paramount+, Prime Video, Tubi`
   - Prime video
@@ -334,6 +335,23 @@ media.ffvpx.enabled = false
 media.rdd-vpx.enabled = false
 extensions.screenshots.disabled = true
 ```
+
+### Tutanota
+
+Go to Settings, and change the following settings:
+
+- Email
+    - Default sender: Enter personal email
+    - Default delivery: Not confidential
+    - Email signature
+        - Enter personal signature and save
+- Appearance
+	- User settings
+		- Week start: Sunday
+- Desktop
+	- Run in background: No
+	- Default download path: `~/Downloads`
+	- Desktop integration: Activated
 
 ## Netflix 1080p
 

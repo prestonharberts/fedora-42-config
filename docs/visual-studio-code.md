@@ -9,6 +9,19 @@ dnf check-update
 sudo dnf install code
 ```
 
+Run the following to copy the desktop app to your local folder to make some changes to the exec command:
+
+```
+cp /usr/share/applications/code.desktop ~/.local/share/applications
+vi ~/.local/share/applications/code.desktop
+```
+
+Add the following to the end of every line that begins with `Exec` (space included):
+
+```
+ --password-store=basic
+ ```
+
 Click "Mark as done", then disable "Show welcome page on startup" on the new page.
 
 Sign in using GitHub from the bottom-left corner (click the person icon).

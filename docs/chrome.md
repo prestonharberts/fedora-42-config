@@ -7,6 +7,19 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 sudo dnf localinstall ./google-chrome-stable_current_x86_64.rpm
 ```
 
+Run the following to copy the desktop app to your local folder to make some changes to the exec command:
+
+```
+cp /usr/share/applications/google-chrome.desktop ~/.local/share/applications
+vi ~/.local/share/applications/google-chrome.desktop
+```
+
+Add the following to the end of every line that begins with `Exec` (space included):
+
+```
+ --password-store=basic
+ ```
+
 Uncheck the startup boxes to make Chrome the default browser and send diagnostics. Sign in to Google account.
 
 Change the following in Settings:

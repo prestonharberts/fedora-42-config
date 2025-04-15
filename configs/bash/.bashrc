@@ -81,7 +81,7 @@ alias gitps='git push'
 alias gits='git status'
 
 # frequently used commands: software
-alias c='code'
+alias c='code --password-store=basic'
 
 # frequently used commands: system upgrade
 alias upgrade='sudo dnf upgrade --exclude=kernel* --refresh -y && sudo dnf autoremove -y && flatpak upgrade -y'
