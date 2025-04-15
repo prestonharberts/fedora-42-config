@@ -362,7 +362,6 @@ Also change the following from `about:config`:
 ```
 browser.tabs.closeWindowWithLastTab = false
 browser.tabs.insertAfterCurrent = true
-browser.chrome.site_icons = false
 screenshots.browser.component.enabled = false
 ```
 
