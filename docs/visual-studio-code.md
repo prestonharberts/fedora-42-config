@@ -1,0 +1,199 @@
+# Visual Studio Code
+
+Install VSCodium with the following commands in terminal:
+
+```
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+dnf check-update
+sudo dnf install code
+```
+
+Click "Mark as done", then disable "Show welcome page on startup" on the new page.
+
+Sign in using GitHub from the bottom-left corner (click the person icon).
+
+If setting up for first time, change the following settings. Otherwise, everything should be all set.
+
+- Accept Suggestion On Enter: Off
+- Line Numbers: relative
+- Scrollbar: Horizontal: hidden
+- Scrollbar: Vertical: hidden
+- Detect Indentation: Off
+- Inlay Hints: Off
+- Sticky Scroll: Off
+- Tab Completion: On
+- Tab Size: 2
+- Word Wrap: On
+- Wrapping Indent: indent
+- Font Family: Insert `'SF Mono', ` at the beginning after following the instructions in `sf-font.md`
+- Font Size: 12
+- Format On Paste: On
+- Format On Save: On
+- Auto Detect Color Scheme: On
+- Diff Decorations Gutter Width: 1
+- Integrated: Font Family: `'SF Mono'`
+- Integrated: Font Size: 13
+- Minimap
+  - Max Column: 30
+  - Render Characters: Off
+  - Show Slider: always
+  - Side: left
+  - Size: fit
+- View
+  - Show Quietly: On
+- Zen
+  - Hide Line Numbers: Off
+  - Show tabs: none
+- HTML
+  - Format: Wrap Line Length: 0
+  - Auto Closing Tags: Off
+  - Auto Create Quotes: Off
+- Javascript
+  - Auto Closing Tags: Off
+- TypeScript
+  - Auto Closing Tags: Off
+- Telemetry
+  - Feedback: Off
+  - Telemetry Level: Off
+
+Install the Fedora GNOME light & dark themes extension by Oliver Fink, and change the following settings:
+
+- Color Theme: Gnome Light (GitHub)
+- Preferred Dark Color Theme: Gnome Dark (GitHub)
+- Preferred Light Color Theme: Gnome Light (GitHub)
+
+Install the following extensions:
+
+- Bash IDE by mads-hartmann
+- Error Lens by usernamehw
+- Flutter by Dart-Code
+- Live Server by ritwickdey
+- Python by ms-python
+- ShellCheck by Timon Wang.
+- VSCode Neovim extension by Alexey Svetliakov 
+- clangd by LLVM (install clangd when propted; you may have to open a .cpp file first in which case also press `Ctrl+Shift+P` and enter "clangd: Toggle inlay hints")
+- statusbar-commands by Andreas Weber
+- Indenticator by SirTori
+
+Also install shfmt by Martin Kühl. Then, run `go install mvdan.cc/sh/v3/cmd/shfmt@latest` to install the dependency. The directory `~/go/bin/` may need to be added to your PATH if it is not already.
+
+
+Press `Ctrl+Shift+P` and enter "Open User Settings (JSON)." Then, add a comma to the last entry before the closing curly brace, and add the following after:
+
+```
+    "workbench.colorCustomizations": {
+        "editorOverviewRuler.addedForeground": "#0000",
+        "editorOverviewRuler.bracketMatchForeground": "#0000",
+        "editorOverviewRuler.commentForeground": "#0000",
+        "editorOverviewRuler.commentUnresolvedForeground": "#0000",
+        "editorOverviewRuler.commonContentForeground": "#0000",
+        "editorOverviewRuler.currentContentForeground": "#0000",
+        "editorOverviewRuler.deletedForeground": "#0000",
+        "editorOverviewRuler.errorForeground": "#0000",
+        "editorOverviewRuler.findMatchForeground": "#0000",
+        "editorOverviewRuler.incomingContentForeground": "#0000",
+        "editorOverviewRuler.infoForeground": "#0000",
+        "editorOverviewRuler.inlineChatInserted": "#0000",
+        "editorOverviewRuler.inlineChatRemoved": "#0000",
+        "editorOverviewRuler.modifiedForeground": "#0000",
+        "editorOverviewRuler.rangeHighlightForeground": "#0000",
+        "editorOverviewRuler.selectionHighlightForeground": "#0000",
+        "editorOverviewRuler.warningForeground": "#0000",
+        "editorOverviewRuler.wordHighlightForeground": "#0000",
+        "editorOverviewRuler.wordHighlightStrongForeground": "#0000",
+        "editorOverviewRuler.wordHighlightTextForeground": "#0000"
+    },
+    "statusbar_command.commands": [
+        {
+            "text": "$(folder)",
+            "tooltip": "Open Containing Folder",
+            "id": "sbc_folder",
+            "name": "sbc_folder",
+            "priority": 1,
+            "alignment": "left",
+            "command": "revealFileInOS"
+        },
+        {
+            "text": "$(gear)",
+            "tooltip": "Open User Settings",
+            "id": "sbc_settings",
+            "name": "sbc_settings",
+            "priority": 1,
+            "alignment": "right",
+            "command": "workbench.action.openWorkspaceSettings"
+        },
+        {
+            "text": "$(book)",
+            "tooltip": "Toggle Zen Mode",
+            "id": "sbc_zen",
+            "name": "sbc_zen",
+            "priority": 1,
+            "alignment": "right",
+            "command": "workbench.action.openWorkspaceSettings"
+        }
+    ]
+```
+
+Change the following settings once all plugins have been installed:
+
+- Neovim Viewport Height Extend: 10000
+
+Right click the bottom status bar, and disable the following items:
+
+- Remote Host
+- Source Control Publish
+- Forwarded Ports
+- VSCode Neovim (Extension)
+- Editor Indentation
+- Editor Encoding
+- Editor End of Line
+- Indenticator (Extension)
+
+Change `-1` to `1` in `~/.vscode-oss/extensions/roscop.activefileinstatusbar-1.0.3-universal/extension.js` at this line:
+
+```
+var sb = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, -1);
+```
+
+Change the following Indenticator settings:
+
+- Indenticator Inner Width: 0.5
+- Indenticator Width: 0.5
+
+Restart VSCodium for some changes to take effect.
+
+Remove the following keybind by rightclicking it in Keyboard Shortcuts (open it by searching it through `Ctrl+Shift+P`)
+
+- workbench.action.quit
+- insertNextSuggestion
+- insertPrevSuggestion
+
+Change the following shortcuts:
+
+- selectNextSuggestion: `Ctrl+Down arrow` to `Tab`
+- selectPrevSuggestion: `Ctrl+Up arrow` to `Shift+Tab`
+- Accept Inline Suggestion (both options): `Tab` to `Ctrl+Enter`
+- codeium.supercompleteAccept: `Ctrl+Enter`
+
+Open VSCode Neovim's settings, and add `q` to "Ctrl Keys For Insert Mode" and "Ctrl Keys For Normal Mode"
+
+ Open the user settings JSON, and add the following:
+
+ ```
+   "liveServer.settings.ignoreFiles": [
+     "**/*.db",
+     "**/*.db~",
+     "**/*.db-journal",
+    ],
+```
+
+Right click the titlebar and enable "Restore native titlebar". Restart, then right-click again and enable "Hide custom titlebar". Under View/Appearance, hide Menu Bar.
+
+Click the Copilot icon at the bottom and set up. Allow signing it into GitHub. Press `Ctrl+Shift+P` and serach Manage Copilot. Change the following settings:
+
+- Features
+  - Copilot can search the web: Enabled
+  - OpenAI GPT-4.1 in Copilot: Enabled
+- Privacy
+  - Allow GitHub to use my data for product improvements: Off
