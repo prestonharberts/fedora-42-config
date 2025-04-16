@@ -74,7 +74,8 @@ Right click empty space on the toolbar (same bar as the search bar), and go to C
 - Remove the Firefox account button
 - Remove the New Tab button next to the open tabs
 - Remove the Homepage button
-- Right click the Download icon and uncheck "Hide Button When Empty"
+- Move the download button to be after the refresh button
+- Put "Save to Pocket" and "Show tabs from other devices" before the extension button
 
 Right click an empty space on the Bookmarks toolbar. Change the following setting:
 
