@@ -56,6 +56,10 @@ alias x='xclip -sel c'
 alias v='nvim'
 alias vi='nvim'
 
+# frequently used commands: development
+alias killnode='pkill npm; pkill -f "npm start"; pkill -f node'
+alias mdb='sudo systemctl start mariadb'
+
 # frequently used commands: folder navigation
 alias .obsidian='cd ~/Documents/obsidian/.obsidian/'
 alias bg2ob='cd ~/Repos/biblegateway-to-obsidian/'
@@ -79,6 +83,16 @@ alias gitrm='git rm'
 alias gitpl='git pull'
 alias gitps='git push'
 alias gits='git status'
+alias gitst='git stash'
+alias gitstp='git stash pop'
+
+# less frequently used commands: git
+alias gitbd='git branch -d'
+alias gitbdr='git push --delete origin'
+alias gitcb='git checkout -b'
+alias gitpsb='git push --set-upstream origin'
+alias gitplb='for branch in $(git branch | sed "s/^\*//"); do git checkout "$branch" && git pull; done'
+alias gitcrb='git fetch --all && for remote in $(git branch -r | grep -v "HEAD"); do branch=${remote#origin/}; if git show-ref --verify --quiet refs/heads/"$branch"; then git checkout "$branch" && git pull; else git checkout -b "$branch" "$remote"; fi; done'
 
 # frequently used commands: software
 alias c='code --password-store=basic'
@@ -102,3 +116,5 @@ alias gcloud-pub='ssh -i ~/.ssh/shared-key shared-access-key@34.59.33.66'
 p() {
   xclip -selection clipboard
 }
+
+export BROWSER="google-chrome --password-store=basic"
