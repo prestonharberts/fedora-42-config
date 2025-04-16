@@ -70,5 +70,6 @@ Edit the following keyboard shortcuts from Configure Keyboard Shortcuts:
 - Clear Scrollback and Reset: `Ctrl+L`
 - Copy: `Ctrl+C`
 - Paste: `Ctrl+V`
+- Select All: `Ctrl+A`
 
 Disable Show Menubar from the menubar. Open again when needed with `Ctrl-Shift-M`.
