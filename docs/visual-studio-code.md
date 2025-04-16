@@ -47,6 +47,7 @@ If setting up for first time, change the following settings. Otherwise, everythi
 - Diff Decorations Gutter Width: 1
 - Integrated: Font Family: `'SF Mono'`
 - Integrated: Font Size: 13
+- Integrated: Send Keybindings To Shell: On
 - Minimap
   - Max Column: 30
   - Render Characters: Off
@@ -79,6 +80,7 @@ Install the Fedora GNOME light & dark themes extension by Oliver Fink, and chang
 Install the following extensions:
 
 - Bash IDE by mads-hartmann
+- Create by HiDeoo
 - Error Lens by usernamehw
 - Flutter by Dart-Code
 - Live Server by ritwickdey
@@ -181,6 +183,21 @@ Remove the following keybind by rightclicking it in Keyboard Shortcuts (open it 
 - workbench.action.quit
 - insertNextSuggestion
 - insertPrevSuggestion
+- workbench.action.quickOpenNavigateNextInEditorPicker
+- workbench.action.quickOpenNavigatePreviousInEditorPicker
+- workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup
+- workbench.action.quickOpenNavigatePreviousInEditorPicker
+- workbench.action.focusFirstEditorGroup
+- workbench.action.focusSecondEditorGroup
+- workbench.action.focusThirdEditorGroup
+- workbench.action.focusFourthEditorGroup
+- workbench.action.focusFifthEditorGroup
+- workbench.action.focusSixthEditorGroup
+- workbench.action.focusSeventhEditorGroup
+- workbench.action.focusEightEditorGroup
+- workbench.action.zoomIn
+- workbench.action.zoomOut
+- workbench.action.focusSideBar
 
 Change the following shortcuts:
 
@@ -188,8 +205,45 @@ Change the following shortcuts:
 - selectPrevSuggestion: `Ctrl+Up arrow` to `Shift+Tab`
 - Accept Inline Suggestion (both options): `Tab` to `Ctrl+Enter`
 - codeium.supercompleteAccept: `Ctrl+Enter`
+- Terminal: Select All: `Shift+Ctrl+A`
+- workbench.action.nextEditorInGroup: `Ctrl+Tab`
+- workbench.action.previousEditorInGroup: `Ctrl+Shift+Tab`
+- workbench.action.focusAboveGroup: `Alt+K`
+- workbench.action.focusBelowGroup: `Alt+J`
+- workbench.action.focusLeftGroup: `Alt+H`
+- workbench.action.focusRightGroup: `Alt+L`
+- workbench.action.closeEditorsInGroup: `Ctrl+Shift+W`
+- workbench.action.closeActiveEditor: `Ctrl+W`
+- workbench.files.action.saveAllInGroup: `Ctrl+Shift+S`
+- workbench.action.newGroupAbove: `Shift+Alt+K`
+- workbench.action.newGroupBelow: `Shift+Alt+J`
+- workbench.action.newGroupLeft: `Shift+Alt+H`
+- workbench.action.newGroupRight: `Shift+Alt+L`
+- create.newFromCurrent: `Ctrl+N`
+- create.new: `Ctrl+Shift+N`
+- editor.foldLevel1: `Ctrl+1`
+- editor.foldLevel2: `Ctrl+2`
+- editor.foldLevel3: `Ctrl+3`
+- editor.foldLevel4: `Ctrl+4`
+- editor.foldLevel5: `Ctrl+5`
+- editor.foldLevel6: `Ctrl+6`
+- editor.foldLevel7: `Ctrl+7`
+- editor.fold: `Ctrl+[`
+- editor.foldAll: `Ctrl+Shift+[`
+- editor.unfold: `Ctrl+]`
+- editor.unfoldAll: `Ctrl+Shift+]`
+- editor.action.fontZoomOut: `Ctrl+-`
+- editor.action.fontZoomIn: `Ctrl+=`
+- editor.action.fontZoomReset: `Ctrl+0`
+- vscode-neovim.restart: `Ctrl+Alt+Shift+/`
 
-Open VSCode Neovim's settings, and add `q` to "Ctrl Keys For Insert Mode" and "Ctrl Keys For Normal Mode"
+Open VSCode Neovim's settings, and add `q` to "Ctrl Keys For Insert Mode" and "Ctrl Keys For Normal Mode". Remove the following for both normal and insert mode:
+
+- `a`
+- `c`
+- `x`
+- `v`
+- `w`
 
  Open the user settings JSON, and add the following:
 
@@ -210,3 +264,15 @@ Click the Copilot icon at the bottom and set up. Allow signing it into GitHub. P
   - OpenAI GPT-4.1 in Copilot: Enabled
 - Privacy
   - Allow GitHub to use my data for product improvements: Off
+
+If Neovim is stuck syncing layouts, run the following to build from source:
+
+```
+cd ~/Repos
+git clone https://github.com/vscode-neovim/vscode-neovim
+cd vscode-neovim
+npm install
+npm run build
+```
+
+Install the .vsix from Visual Studio Code.
