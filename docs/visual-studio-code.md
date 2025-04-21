@@ -30,11 +30,12 @@ If setting up for first time, change the following settings. Otherwise, everythi
 
 - Accept Suggestion On Enter: Off
 - Line Numbers: relative
+- Experimental Edit Context Enabled: On
 - Scrollbar: Horizontal: hidden
 - Scrollbar: Vertical: hidden
 - Detect Indentation: Off
 - Inlay Hints: Off
-- Sticky Scroll: Off
+- Smooth Scrolling: On
 - Tab Completion: On
 - Tab Size: 2
 - Word Wrap: On
@@ -70,6 +71,8 @@ If setting up for first time, change the following settings. Otherwise, everythi
 - Telemetry
   - Feedback: Off
   - Telemetry Level: Off
+- Git
+  - Autofetch: true
 
 Install the Fedora GNOME light & dark themes extension by Oliver Fink, and change the following settings:
 
@@ -93,66 +96,97 @@ Install the following extensions:
 
 Also install shfmt by Martin Kühl. Then, run `go install mvdan.cc/sh/v3/cmd/shfmt@latest` to install the dependency. The directory `~/go/bin/` may need to be added to your PATH if it is not already.
 
+Run the following to install an older version of Neovim to use with the VSCode Neovim extension:
+
+```
+go install github.com/asdf-vm/asdf/cmd/asdf@v0.16.0
+asdf plugin add neovim https://github.com/richin13/asdf-neovim.git
+asdf install neovim 0.9.5
+# run this line to verify if installed
+# $(asdf where neovim 0.9.5)/bin/nvim
+```
+
+Change the following settings:
+
+- Vim
+  - Smart Relative Line: On
+  - Hlsearch: On
+  - Use System Clipboard: On
+  - Vimrc Enable: On
+  - Neovim Viewport Height Extend: 10000
+  - Reveal Cursor Scroll Line: On
+  - Neovim Executables Path Linux: `/home/USER/.asdf/installs/neovim/0.9.5/bin/nvim` (replace USER with your user)
+
+A startup message appears indicating that you are running an unsupported version of Neovim. This can be ignored, or you can comment out the notification in the source code of VSCode Neovim in `runtime/vscode-neovim.vim` at this section:
+
+```
+-- if warn then
+-- vim.rpcnotify(vim.g.vscode_channel, "vscode-action", "eval", {
+-- args = { "vscode.window.showErrorMessage(args)", table.concat(msgs, " ") },
+-- })
+```
 
 Press `Ctrl+Shift+P` and enter "Open User Settings (JSON)." Then, add a comma to the last entry before the closing curly brace, and add the following after:
 
 ```
-    "workbench.colorCustomizations": {
-        "editorOverviewRuler.addedForeground": "#0000",
-        "editorOverviewRuler.bracketMatchForeground": "#0000",
-        "editorOverviewRuler.commentForeground": "#0000",
-        "editorOverviewRuler.commentUnresolvedForeground": "#0000",
-        "editorOverviewRuler.commonContentForeground": "#0000",
-        "editorOverviewRuler.currentContentForeground": "#0000",
-        "editorOverviewRuler.deletedForeground": "#0000",
-        "editorOverviewRuler.errorForeground": "#0000",
-        "editorOverviewRuler.findMatchForeground": "#0000",
-        "editorOverviewRuler.incomingContentForeground": "#0000",
-        "editorOverviewRuler.infoForeground": "#0000",
-        "editorOverviewRuler.inlineChatInserted": "#0000",
-        "editorOverviewRuler.inlineChatRemoved": "#0000",
-        "editorOverviewRuler.modifiedForeground": "#0000",
-        "editorOverviewRuler.rangeHighlightForeground": "#0000",
-        "editorOverviewRuler.selectionHighlightForeground": "#0000",
-        "editorOverviewRuler.warningForeground": "#0000",
-        "editorOverviewRuler.wordHighlightForeground": "#0000",
-        "editorOverviewRuler.wordHighlightStrongForeground": "#0000",
-        "editorOverviewRuler.wordHighlightTextForeground": "#0000"
-    },
-    "statusbar_command.commands": [
-        {
-            "text": "$(folder)",
-            "tooltip": "Open Containing Folder",
-            "id": "sbc_folder",
-            "name": "sbc_folder",
-            "priority": 1,
-            "alignment": "left",
-            "command": "revealFileInOS"
-        },
-        {
-            "text": "$(gear)",
-            "tooltip": "Open User Settings",
-            "id": "sbc_settings",
-            "name": "sbc_settings",
-            "priority": 1,
-            "alignment": "right",
-            "command": "workbench.action.openWorkspaceSettings"
-        },
-        {
-            "text": "$(book)",
-            "tooltip": "Toggle Zen Mode",
-            "id": "sbc_zen",
-            "name": "sbc_zen",
-            "priority": 1,
-            "alignment": "right",
-            "command": "workbench.action.openWorkspaceSettings"
-        }
-    ]
+  "editor.experimentalEditContextEnabled": true,
+  "editor.smoothScrolling": true,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.overviewRulerBorder": false,
+  "workbench.colorCustomizations": {
+    "editorOverviewRuler.addedForeground": "#0000",
+    "editorOverviewRuler.border": "#0000",
+    "editorOverviewRuler.bracketMatchForeground": "#0000",
+    "editorOverviewRuler.commentForeground": "#0000",
+    "editorOverviewRuler.commentUnresolvedForeground": "#0000",
+    "editorOverviewRuler.commonContentForeground": "#0000",
+    "editorOverviewRuler.currentContentForeground": "#0000",
+    "editorOverviewRuler.deletedForeground": "#0000",
+    "editorOverviewRuler.errorForeground": "#0000",
+    "editorOverviewRuler.findMatchForeground": "#0000",
+    "editorOverviewRuler.incomingContentForeground": "#0000",
+    "editorOverviewRuler.infoForeground": "#0000",
+    "editorOverviewRuler.inlineChatInserted": "#0000",
+    "editorOverviewRuler.inlineChatRemoved": "#0000",
+    "editorOverviewRuler.modifiedForeground": "#0000",
+    "editorOverviewRuler.rangeHighlightForeground": "#0000",
+    "editorOverviewRuler.selectionHighlightForeground": "#0000",
+    "editorOverviewRuler.warningForeground": "#0000",
+    "editorOverviewRuler.wordHighlightForeground": "#0000",
+    "editorOverviewRuler.wordHighlightStrongForeground": "#0000",
+    "editorOverviewRuler.wordHighlightTextForeground": "#0000"
+  },
+
+  "statusbar_command.commands": [
+      {
+          "text": "$(folder)",
+          "tooltip": "Open Containing Folder",
+          "id": "sbc_folder",
+          "name": "sbc_folder",
+          "priority": 1,
+          "alignment": "left",
+          "command": "revealFileInOS"
+      },
+      {
+          "text": "$(gear)",
+          "tooltip": "Open User Settings",
+          "id": "sbc_settings",
+          "name": "sbc_settings",
+          "priority": 1,
+          "alignment": "right",
+          "command": "workbench.action.openWorkspaceSettings"
+      },
+      {
+          "text": "$(book)",
+          "tooltip": "Toggle Zen Mode",
+          "id": "sbc_zen",
+          "name": "sbc_zen",
+          "priority": 1,
+          "alignment": "right",
+          "command": "workbench.action.openWorkspaceSettings"
+      }
+  ]
 ```
-
-Change the following settings once all plugins have been installed:
-
-- Neovim Viewport Height Extend: 10000
 
 Right click the bottom status bar, and disable the following items:
 

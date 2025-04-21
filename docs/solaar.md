@@ -8,7 +8,7 @@ sudo dnf install solaar -y
 
 Change the following settings (unlock to change and the lock once changed):
 
-- Sensitivity (DPI): 1600
+- Sensitivity (DPI): 1000
 - Thumb Wheel Diversion: On
 - Key/Button Actions
   - Mouse Gesture Button: Gesture Button Navigation
