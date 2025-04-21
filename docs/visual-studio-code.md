@@ -185,7 +185,9 @@ Press `Ctrl+Shift+P` and enter "Open User Settings (JSON)." Then, add a comma to
           "alignment": "right",
           "command": "workbench.action.openWorkspaceSettings"
       }
-  ]
+  ],
+  "liveServer.settings.AdvanceCustomBrowserCmdLine": "google-chrome --password-store=basic"
+
 ```
 
 Right click the bottom status bar, and disable the following items:
