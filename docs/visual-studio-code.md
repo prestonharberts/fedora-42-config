@@ -275,10 +275,6 @@ Change the following shortcuts:
 
 Open VSCode Neovim's settings, and add `q` to "Ctrl Keys For Insert Mode" and "Ctrl Keys For Normal Mode". Remove the following for both normal and insert mode:
 
-- `a`
-- `c`
-- `x`
-- `v`
 - `w`
 
  Open the user settings JSON, and add the following:
