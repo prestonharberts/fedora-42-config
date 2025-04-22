@@ -50,6 +50,7 @@ Now, change the following settings under Configure Konsole:
           - Trim trailing spaces: On
 - Tab Bar / Splitters
   - Appearance
+    - Show Search Tabs button: Never
     - Show Close Tab Button: None
     - Miscellaneous
       - Expand individual tab widths to full window: On
