@@ -64,6 +64,7 @@ Enter `about:config` into the URL bar, and agree to enter. Click the + button fo
 
 ```
 gnomeTheme.hideSingleTab
+gnomeTheme.noThemedIcons
 ```
 
 ## Customize Toolbar
