@@ -1,41 +1,4 @@
-# source global definitions
-if [ -f /etc/bashrc ]; then
-  . /etc/bashrc
-fi
-
-# add custom bin directories to PATH
-PATH="$HOME/.local/bin:$HOME/bin:$PATH"
-PATH="/home/prestonharberts/Bin:$PATH"
-PATH="/home/prestonharberts/Bin/flutter/bin:$PATH"
-PATH="/home/prestonharberts/go/bin:$PATH"
-PATH="/home/prestonharberts/perl5/bin${PATH:+:$PATH}"
-# prioritize executables in the current directory
-export PATH=.:$PATH
-
-# set perl environment variables
-PERL5LIB="/home/prestonharberts/perl5/lib/perl5${PERL5LIB:+:$PERL5LIB}"
-PERL_LOCAL_LIB_ROOT="/home/prestonharberts/perl5${PERL_LOCAL_LIB_ROOT:+:$PERL_LOCAL_LIB_ROOT}"
-PERL_MB_OPT="--install_base \"/home/prestonharberts/perl5\""
-PERL_MM_OPT="INSTALL_BASE=/home/prestonharberts/perl5"
-export PERL5LIB
-export PERL_LOCAL_LIB_ROOT
-export PERL_MB_OPT
-export PERL_MM_OPT
-
-# load additional shell configs from ~/.bashrc.d if the directory exists
-if [ -d ~/.bashrc.d ]; then
-  for rc in ~/.bashrc.d/*; do
-    [ -f "$rc" ] && . "$rc"
-  done
-fi
-
-# enable gcloud SDK and shell completion if installed
-if [ -f "$HOME/.bin/google-cloud-sdk/path.bash.inc" ]; then
-  . "$HOME/.bin/google-cloud-sdk/path.bash.inc"
-fi
-if [ -f "$HOME/.bin/google-cloud-sdk/completion.bash.inc" ]; then
-  . "$HOME/.bin/google-cloud-sdk/completion.bash.inc"
-fi
+# .bashrc
 
 # set shell prompt
 PS1='\[\e]0;\W\a\][\[\033[01;34m\]\h \W\[\033[00m\]] $ '
@@ -49,6 +12,11 @@ stty eof ^w
 alias q='exit'
 
 # frequently used commands: file operations
+# list all files in long format with human-readable sizes
+alias ll='ls -alh --group-directories-first'
+alias lt1='tree -L 1 -C'
+alias lt2='tree -L 2 -C'
+alias lt3='tree -L 3 -C'
 alias b='bib'
 alias d='detox -s hyphenated'
 alias g='gio open'
@@ -76,23 +44,62 @@ alias cduu='cd ../..'
 alias cduuu='cd ../../..'
 
 # frequently used commands: git
-alias gitaa='git add -A'
+alias gits='git status'
 alias gita='git add'
+alias gitaa='git add -A'
 alias gitcm='git commit -m'
-alias gitrm='git rm'
 alias gitpl='git pull'
 alias gitps='git push'
-alias gits='git status'
+alias gitrm='git rm'
+alias gitr='git restore'
 alias gitst='git stash'
 alias gitstp='git stash pop'
 
 # less frequently used commands: git
 alias gitbd='git branch -d'
-alias gitbdr='git push --delete origin'
 alias gitcb='git checkout -b'
-alias gitpsb='git push --set-upstream origin'
-alias gitplb='for branch in $(git branch | sed "s/^\*//"); do git checkout "$branch" && git pull; done'
-alias gitcrb='git fetch --all && for remote in $(git branch -r | grep -v "HEAD"); do branch=${remote#origin/}; if git show-ref --verify --quiet refs/heads/"$branch"; then git checkout "$branch" && git pull; else git checkout -b "$branch" "$remote"; fi; done'
+alias gitpsbranch='git push --set-upstream origin'
+alias gitpsdelbranch='git push --delete origin'
+
+gitsetupall() {
+  set -e
+
+  # ensure we're in a git repo
+  if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    echo "Not a git repository."
+    return 1
+  fi
+
+  # save the current branch
+  originalBranch=$(git symbolic-ref --short HEAD 2>/dev/null)
+
+  # stash changes with a label, including untracked files
+  git stash push --include-untracked -m "Auto-stash before full git setup"
+
+  # fetch all remotes
+  git fetch --all
+
+  # create missing local tracking branches
+  for remoteBranch in $(git branch -r | grep -v "HEAD"); do
+    localBranch=${remoteBranch#origin/}
+    git show-ref --verify --quiet refs/heads/"$localBranch" ||
+      git checkout -b "$localBranch" "$remoteBranch"
+  done
+
+  # pull latest changes into all local branches
+  for branch in $(git for-each-ref --format='%(refname:short)' refs/heads/); do
+    git checkout "$branch" && git pull --ff-only
+  done
+
+  # return to original branch if different
+  currentBranch=$(git symbolic-ref --short HEAD 2>/dev/null)
+  if [ -n "$originalBranch" ] && [ "$originalBranch" != "$currentBranch" ]; then
+    git checkout "$originalBranch"
+  fi
+
+  # restore stashed changes
+  git stash pop || echo "Merge conflicts occurred when popping stash."
+}
 
 # frequently used commands: software
 alias c='code --password-store=basic'
@@ -116,5 +123,8 @@ alias gcloud-pub='ssh -i ~/.ssh/shared-key shared-access-key@34.59.33.66'
 p() {
   xclip -selection clipboard
 }
+
+# frequently used commands: dirs and development
+alias bh='cd ~/Repos/bridginghope-foodpantry && gitsetupall && 
 
 export BROWSER="google-chrome --password-store=basic"

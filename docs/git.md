@@ -48,4 +48,5 @@ Run the following to finish setting up Git:
 ```
 git config --global user.email "putemail@here.com"
 git config --global user.name "Full Name"
+git config --global core.editor "vim"
 ```

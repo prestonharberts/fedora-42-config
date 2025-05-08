@@ -1,6 +1,6 @@
 # Bash
 
-Move `bash/.bashrc` to your home directory. Change all the necessary PATH variables in this file to have the correct username.
+Move `bash/.bashrc` and `bash/.bash_profile` to your home directory. Change all the necessary PATH variables in `.bash_profile` to have the correct username.
 
 Move `bash/.inputrc` to your home directory, and run the following in a terminal:
 
@@ -8,7 +8,7 @@ Move `bash/.inputrc` to your home directory, and run the following in a terminal
 bind -f ~/.inputrc
 ```
 
-Move all of the files in `fedora-40-configuration/configs/bash/bin/` to `~/Bin/` if you would like to use several helpful scripts. Otherwise, skip or add `fedora-40-configuration/configs/bash/bin/` to your PATH in `.bashrc`.
+Move all of the files in `fedora-40-configuration/configs/bash/bin/` to `~/Bin/` if you would like to use several helpful scripts. Otherwise, skip or add `fedora-40-configuration/configs/bash/bin/` to your PATH in `.bash_profile`.
 
 ## Turn Off Bash Case Sensitivity
 

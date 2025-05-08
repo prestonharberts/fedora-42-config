@@ -25,6 +25,7 @@ Now, change the following settings under Configure Konsole:
     - General
       - General Settings
         - Default profile: On
+        - Command: `/bin/bash --login`
         - Initial terminal size: 84 columns; 30 rows
         - I use 84 columns because the first 4 are taken up by the gutter in my Neovim config
         - Terminal bell mode: System Bell
@@ -41,6 +42,7 @@ Now, change the following settings under Configure Konsole:
           - Margins: 16 px
           -  Window > Show Hint for terminal size after resizing: Off
     - Scrolling
+      - Scrollback: 100000 lines
       - Scrollbar position: Hidden
       - Highlighting > Highlight the lines coming into view: Off
     - Mouse
