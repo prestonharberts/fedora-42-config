@@ -116,6 +116,8 @@ Change the following settings:
   - Neovim Viewport Height Extend: 10000
   - Reveal Cursor Scroll Line: On
   - Neovim Executables Path Linux: `/home/USER/.asdf/installs/neovim/0.9.5/bin/nvim` (replace USER with your user)
+- Live Server
+  - Host: `localhost`
 
 A startup message appears indicating that you are running an unsupported version of Neovim. This can be ignored, or you can comment out the notification in the source code of VSCode Neovim in `runtime/vscode-neovim.vim` at this section:
 
