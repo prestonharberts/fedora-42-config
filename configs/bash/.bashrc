@@ -32,7 +32,7 @@ alias mdb='sudo systemctl start mariadb'
 alias .obsidian='cd ~/Documents/obsidian/.obsidian/'
 alias bg2ob='cd ~/Repos/biblegateway-to-obsidian/'
 alias csc='cd ~/Documents/school/classes/csc/'
-alias fedora='cd ~/Repos/fedora-41-config/'
+alias fedora='cd ~/Repos/fedora-42-config/'
 alias obsidian='cd ~/Documents/obsidian/'
 alias pwa='cd ~/.local/share/firefoxpwa/profiles/00000000000000000000000000/'
 alias snippets='cd ~/Documents/obsidian/.obsidian/snippets/'
@@ -109,9 +109,9 @@ alias upgrade='sudo dnf upgrade --exclude=kernel* --refresh -y && sudo dnf autor
 alias upgrade-kernel='sudo dnf upgrade --refresh'
 
 # frequently used commands: virtual machines
-alias f41='sudo virsh start fedora41 && sudo LD_PRELOAD=~/src/hide-menubar/hide-menubar.so virt-viewer fedora41'
-alias sf41='sudo virsh shutdown fedora41'
-alias vf41='sudo LD_PRELOAD=~/src/hide-menubar/hide-menubar.so virt-viewer fedora41'
+alias f41='sudo virsh start fedora42 && sudo LD_PRELOAD=~/src/hide-menubar/hide-menubar.so virt-viewer fedora42'
+alias sf41='sudo virsh shutdown fedora42'
+alias vf41='sudo LD_PRELOAD=~/src/hide-menubar/hide-menubar.so virt-viewer fedora42'
 alias vv='LD_PRELOAD=/path/to/hide-menubar.so virt-viewer'
 
 # ssh connections
@@ -125,6 +125,6 @@ p() {
 }
 
 # frequently used commands: dirs and development
-alias bh='cd ~/Repos/bridginghope-foodpantry && gitsetupall && 
+alias bh='cd ~/Repos/bridginghope-foodpantry && gitsetupall'
 
 export BROWSER="google-chrome --password-store=basic"
