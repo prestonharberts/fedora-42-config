@@ -387,6 +387,12 @@ Change the following settings for the Built-In extensions:
       - Keep Rounded Corners when Maximized: On
 - Simple Message by fredz
   - Write your message: `  Activities`
+- Smart Auto Move by khimaros
+  - General
+    - Activate Workspace: Off
+    - Ignore Workspce: On
+  - Saved Windows
+    - Konsole: OVERRIDE (ANY)
 - Space Bar by luchrioh
   - Behavior
     - General
