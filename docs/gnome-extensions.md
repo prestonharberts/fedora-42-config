@@ -105,6 +105,24 @@ Change the following settings for the Built-In extensions:
 - Color Picker by grroot (only enable when needed)
 - Compiz alike magic lamp effect by hermes83(only if computer will not lag)
   - Duration (ms): 250
+- Custom Command Toggle by storageb
+  - First go to Configuration, and change "Number of Toggle Buttons" to 4, then close and reopen this extension settings window. Set Them all up like this:
+    - Commands
+      - Toggle OFF command:
+        - Button 1: `steam-16-10-low`
+        - Button 2: `steam-16-10-high`
+        - Button 3: `steam-16-9-low`
+        - Button 4: `steam-16-9-high`
+    - Appearance
+      - Button name:
+        - Button 1: Steam (16:10 L)
+        - Button 2: Steam (16:10 H)
+        - Button 3: Steam (16:9 L)
+        - Button 4: Steam (16:9 H)
+      - Icon: `input-gaming-symbolic`
+    - Toggle Behavior
+      - Button Click Action: Always off
+      - Close Menu After Button Press: On
 - Dash to Dock by michele_g
   - Comment every line containing `animateLaunch` in `.local/share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/appIcons.js`
   - Position and size
@@ -261,6 +279,32 @@ Change the following settings for the Built-In extensions:
       - Left click action: play/pause
       - Middle click action: next track
 - Open Bar by x10shun
+  - Auto Theming
+    - Auto-Set Bar, Margins, and Islans BG Alpha: Off
+    - Auto Themes for Dark/Light Modes
+      - Gnome Dark Mode: Light Theme
+      - Gnome Light Mode: Light Theme
+  - Top Bar Properties
+    - Bar Height: 28
+    - Bar Margins: 12.0
+    - Customize Bottom Margin: On
+    - Custom Bottom Margin: 18.0
+    - Apply in Overview: Off
+    - Apply in Fullscreen: Off
+  - Window-Max Bar
+    - Enable Window-Max Bar: On
+    - Bar BG Alpha (WMax): 0.80
+    - Customize Bar Height?: On
+    - Bar Height (WMax): Customize this to liking, it's different for every screen (I use 0.0 on 4k and 1.6 on 1600x1200)
+  - Bar Foreground
+    - Panel Font: SF Pro Text Medium 11 (after following `fonts.md`)
+  - Bar Highlights
+    - Highlight Alpha: 0.15
+    - Horizontal Padding: 0.0
+  - Bar Border
+    - Width: 0.0
+    - Corner Radius: 16
+    - Neon Glow: Off
 - Peek Top Bar on Fullscreen by marcinjahn (currently disabled)
 - Power Profile Switcher by eliapasquali (only if on laptop) (currently disabled)
   - Default profiles
@@ -321,6 +365,14 @@ Change the following settings for the Built-In extensions:
       - Rear Microphone - Built-in Audio: Line In
       - Front Microphone - Built-in Audio: Microphone In
     - Applications
+    - Respect Do Not Disturb by farodriguess
+- Rounded Corners by lennart-k (disable if using multiple monitors)
+  - General settings
+    - Border radius: 14px
+- Rounded Window Corners Reborn by flexagoon
+  - In case it errors or doesn't work, run `dconf reset -f /org/gnome/shell/extensions/rounded-window-corners-reborn/` in Terminal
+  - General
+    - Applications
       - Skip LibAdwaita Applications: Off
     - Global Settings
       - Border Radius: 14.0
@@ -342,6 +394,7 @@ Change the following settings for the Built-In extensions:
           - Custom label for unnamed workspaces: Workspace
       - Switch workspaces with scroll wheel: Disabled
       - Show empty workspaces: Off
+      - Toggle overview: Off
   - Appearance
     - General
       - Workspaces-bar padding: 0
@@ -352,8 +405,8 @@ Change the following settings for the Built-In extensions:
       - Font size: 11
       - Font weight: Semi Bold
       - Border radius: 8
-      - Horizontal padding: 12
-      - Vertical padding: 1
+      - Horizontal padding: 8
+      - Vertical padding: 0
     - Inactive Workspace
       - Text color: #606060
   - Shortcuts

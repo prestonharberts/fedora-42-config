@@ -33,8 +33,8 @@
 - Keyboard
   - View and Customize Shortcuts
     - Close window: `Super-Q`
-    - Hide all normal windows: `Super-E`
-    - Hide window: `Super-S`
+    - Hide all normal windows: `Super-R`
+    - Hide window: `Super-E`
     - Open the quick settings menu: `Super-M`
     - Show the notification list: `Super-N`
     - Focus the active notification: `Shift+Super+N`
@@ -54,7 +54,7 @@
     - Toggle fullscreen mode: `Super-F`
     - Toggle window on all workspaces or one: `Super+X`
     - Move window to last workspace: `Super-Shift-/`
-    - Move window to workspace 1: Disabled
+    - Move window to workspace 1: `Super-Shift-[`
     - Switch to workspace 1: Disabled
     - Switch to last workspace: Disabled
     - View split on left: `Super-A`
@@ -62,7 +62,7 @@
     - Toggle maximization state: `Super-W`
     - Resize window: Disabled
     - Launch help browser: Disabled
-    - Activate the window menu: Disabled
+    - Activate the window menu: `Super-Space`
     - Switch windows directly: Disabled
     - Switch windows of an app directly: Disabled
     - Switch system controls: Disabled
@@ -72,10 +72,6 @@
     - Zoom in: Disabled
     - Zoom out: Disabled
     - Turn screen reader on or off: Disabled
-    - Custom Shortcuts
-      - Create the following
-        - Game mode; `disable-gnome-extensions && kill-background-processes`; `Super+Shift+B`
-        - Office mode; `enable-gnome-extensions && start-background-processes`; `Super+V`
 - Privacy
   - File History & Trash
     - File History
