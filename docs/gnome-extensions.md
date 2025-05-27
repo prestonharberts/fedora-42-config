@@ -417,7 +417,7 @@ Change the following settings for the Built-In extensions:
     - Switch to empty workspace: Disabled
     - Open Menu: Disabled
 - Tiling Assistant by Leleat
-  - Edit `.local/share/gnome-shell/extensions/tiling-assistant@leleat-on-github/src/extension/tilingPopup.js` at line 124 so the opacity is `0`
+  - Edit `.local/share/gnome-shell/extensions/tiling-assistant@leleat-on-github/src/extension/tilingPopup.js` at line 124 so the opacity (which should be `180`) is set to `0`
   - Tiling Popup
     - Include apps from all workspaces: On
   - Tile Groups
