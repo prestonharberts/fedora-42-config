@@ -172,16 +172,16 @@ Change the following settings for the Built-In extensions:
     - Customize opacity: Fixed
     - Opacity: 0%
   - Unpin all current dock apps, and pin the following apps in order:
+    - Konsole
     - Firefox
     - Obsidian
-    - Konsole
-    - Files
-    - Tutanota
+    - ChatGPT (see Firefox setup)
     - Todoist
     - Google Calendar
-    - Tidal
-    - Rhythmbox
-    - ChatGPT (see Firefox setup)
+    - Foliate
+    - Visual Studio Code
+    - Chrome
+    - Files
 - Date Menu Formatter by Marcin Jakubowski
   - Formatter: SimpleDateFormat
   - Pattern: I prefer these options
