@@ -195,6 +195,7 @@ Change the following settings for the Built-In extensions:
   - Add an emblem to soft links: Off
   - Show hidden files: On
 - Disable Workspace Animation by monologique (optional)
+- Focus changer by heartmire
 - Focus by scaryawr
   - Inactive Opacity: One notch away from the right (use arrow keys to move)
   - Special Focus Opacity: Full
@@ -415,6 +416,30 @@ Change the following settings for the Built-In extensions:
     - Move current workspace right: Disabled
     - Switch to empty workspace: Disabled
     - Open Menu: Disabled
+- Tiling Assistant by Leleat
+  - Edit `.local/share/gnome-shell/extensions/tiling-assistant@leleat-on-github/src/extension/tilingPopup.js` at line 124 so the opacity is `0`
+  - Tiling Popup
+    - Include apps from all workspaces: On
+  - Tile Groups
+    - Raise together: Off
+  - Gaps
+    - Windows: 8
+    - Screen Edges: 8
+    - Maximized Windows
+  - Dynamic Keybinding Behavior
+    - Tiling State
+  - Keybindings
+    - General
+      - Toggle Maximization: `Super-W`
+    - Edge Tiling
+      - Tile to bottom: `Super-S`
+      - Tile to left: `Super-A`
+      - Tile to right: `Super-D`
+    - Corner Tiling
+      - Tile to top-left: Disabled
+      - Tile to top-right: Disabled
+      - Tile to bottom-left: Disabled
+      - Tile to bottom-right: Disabled
 - Top Bar Organizer by June
   - After installing the Mpris Label extension, move Mpris Label to the beginning of the Center Top Bar Box
   - Move gnome-pomodoro to be at the beginning of the Left Top Bar Box
