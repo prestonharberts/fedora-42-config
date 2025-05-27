@@ -16,7 +16,6 @@ sudo dnf install gnome-tweaks -y
     - Double-Click: None
     - Middle-Click: None
 - Windows
-  - Center New Windows: On
   - Window Action Key: Alt
   - Resize with Secondary-Click: On
   - Window Focus: Focus on Hover
