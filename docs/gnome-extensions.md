@@ -116,6 +116,26 @@ Change the following settings for the Built-In extensions:
     - Dock size limit: 80%
     - Icon size limit: 40 px
   - Launchers
+      - Button name:
+        - Button 1: Steam (16:10 L)
+        - Button 2: Steam (16:10 H)
+        - Button 3: Steam (16:9 L)
+        - Button 4: Steam (16:9 H)
+      - Icon: `input-gaming-symbolic`
+    - Toggle Behavior
+      - Button Click Action: Always off
+      - Close Menu After Button Press: On
+- Dash to Dock by michele_g
+  - Comment every line containing `animateLaunch` in `.local/share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/appIcons.js`
+  - Position and size
+    - Show the dock on: Choose primary monitor
+    - Intelligent autohide
+      - Autohide
+        - Autohide: Off
+        - Dodge windows: Off
+    - Dock size limit: 80%
+    - Icon size limit: 40 px
+  - Launchers
     - Keep the focused application always visible in the dash: Off
     - Show Appplications icon: Off
   - Behavior
@@ -144,24 +164,6 @@ Change the following settings for the Built-In extensions:
     - Tidal
     - Rhythmbox
     - ChatGPT (see Firefox setup)
-- Custom Command Toggle by storageb
-  - First go to Configuration, and change "Number of Toggle Buttons" to 4, then close and reopen this extension settings window. Set Them all up like this:
-    - Commands
-      - Toggle OFF command:
-        - Button 1: `steam-16-10-low`
-        - Button 2: `steam-16-10-high`
-        - Button 3: `steam-16-9-low`
-        - Button 4: `steam-16-9-high`
-    - Appearance
-      - Button name:
-        - Button 1: Steam (16:10 L)
-        - Button 2: Steam (16:10 H)
-        - Button 3: Steam (16:9 L)
-        - Button 4: Steam (16:9 H)
-      - Icon: `input-gaming-symbolic`
-    - Toggle Behavior
-      - Button Click Action: Always off
-      - Close Menu After Button Press: On
 - Date Menu Formatter by Marcin Jakubowski
   - Formatter: SimpleDateFormat
   - Pattern: I prefer these options
@@ -170,6 +172,10 @@ Change the following settings for the Built-In extensions:
     - `M·dd·y     h:mm a` to have date as well
     - `M·d·y     h:mm:ss` to replace AM/PM with seconds
   - Font size: 11 pt
+- Desktop Icons NG (DING) by rastersoft
+  - Highlight the drop place during Drag'n'Drop: Off
+  - Add an emblem to soft links: Off
+  - Show hidden files: On
 - Disable Workspace Animation by monologique (optional)
 - Focus by scaryawr
   - Inactive Opacity: One notch away from the right (use arrow keys to move)
@@ -254,6 +260,7 @@ Change the following settings for the Built-In extensions:
     - Mouse bindings
       - Left click action: play/pause
       - Middle click action: next track
+- Open Bar by x10shun
 - Peek Top Bar on Fullscreen by marcinjahn (currently disabled)
 - Power Profile Switcher by eliapasquali (only if on laptop) (currently disabled)
   - Default profiles
@@ -313,13 +320,6 @@ Change the following settings for the Built-In extensions:
       - Internal Microphone - Built-in Audio: Dell XPS
       - Rear Microphone - Built-in Audio: Line In
       - Front Microphone - Built-in Audio: Microphone In
-- Respect Do Not Disturb by farodriguess
-- Rounded Corners by lennart-k (disable if using multiple monitors)
-  - General settings
-    - Border radius: 14px
-- Rounded Window Corners Reborn by flexagoon
-  - In case it errors or doesn't work, run `dconf reset -f /org/gnome/shell/extensions/rounded-window-corners-reborn/` in Terminal
-  - General
     - Applications
       - Skip LibAdwaita Applications: Off
     - Global Settings
@@ -332,56 +332,36 @@ Change the following settings for the Built-In extensions:
           - Blur radius: 28
           - Opacity: 60
       - Keep Rounded Corners when Maximized: On
-  - Space Bar by luchrioh
-    - Behavior
-      - General
-        - Indicator Style
-          - Custom labe text
-            - Custom label for unnamed workspaces: Workspace
-        - Show empty workspaces: Off
-      - Smart Workspace Names
-        - Enable smart workspace names: On
-        - Open the following apps and name them accordingly:
-          - Bible (Logos)
-          - Documents (Document Viewer, LibreOffice Writer, Zathura)
-          - Audio (fre:ac)
-          - Browser (Firefox)
-          - Calendar (Google Calendar)
-          - Coding (Sigil, VSCodium)
-          - Drawing (Inkscape, LibreOffice Draw)
-          - Hypervisor (Virtual Machine Manager)
-          - Mail (Tuta Mail)
-          - Messages (Discord)
-          - Music (Amberol, Tidal, YouTube Music, Rhythmbox)
-          - Notes (Obsidian)
-          - Photo (Krita)
-          - Photos (showFoto)
-          - Reading (Calibre, Foliate)
-          - Slides (LibreOffice Impress)
-          - Spreadsheets (LibreOffice Calc)
-          - Streaming (Crunchyroll, Disney+, Hulu, Max, Netflix, Paramount+, Prime Video, Tubi)
-          - Video (Shotcut)
-          - Videos (YouTube)
-          - Visualizer (Cavasik)
-    - Appearance
-      - General
-        - Workspaces-bar padding: 0
-        - Workspace margin: 0
-      - Active Workspace
-        - Background color: Any color, fully transparent
-        - Text color: #000000
-        - Font size: 11
-        - Font weight: Semi Bold
-        - Border radius: 8
-        - Horizontal padding: 12
-        - Vertical padding: 1
-      - Inactive Workspace
-        - Text color: #606060
-    - Shortcuts
-      - Switch to workspace: Off
-      - Move current workspace left: Disabled
-      - Move current workspace right: Disabled
-      - Switch to empty workspace: Disabled
+- Simple Message by fredz
+  - Write your message: `  Activities`
+- Space Bar by luchrioh
+  - Behavior
+    - General
+      - Indicator Style
+        - Custom labe text
+          - Custom label for unnamed workspaces: Workspace
+      - Switch workspaces with scroll wheel: Disabled
+      - Show empty workspaces: Off
+  - Appearance
+    - General
+      - Workspaces-bar padding: 0
+      - Workspace margin: 0
+    - Active Workspace
+      - Background color: Any color, fully transparent
+      - Text color: #000000
+      - Font size: 11
+      - Font weight: Semi Bold
+      - Border radius: 8
+      - Horizontal padding: 12
+      - Vertical padding: 1
+    - Inactive Workspace
+      - Text color: #606060
+  - Shortcuts
+    - Switch to workspace: Off
+    - Move current workspace left: Disabled
+    - Move current workspace right: Disabled
+    - Switch to empty workspace: Disabled
+    - Open Menu: Disabled
 - Top Bar Organizer by June
   - After installing the Mpris Label extension, move Mpris Label to the beginning of the Center Top Bar Box
   - Move gnome-pomodoro to be at the beginning of the Left Top Bar Box
@@ -430,6 +410,8 @@ Change the following settings for the Built-In extensions:
       - On-Screen Time (ms): 200
   - Size & Text
     - WS Box Width Scale (%): 120
+    - Text Options
+      - Wrap long App Names: Off
   - Colors
     - Pop-up Colors
       - Background color / opacity: #FFFFFF

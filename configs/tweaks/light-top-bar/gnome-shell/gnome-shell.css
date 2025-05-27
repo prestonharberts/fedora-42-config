@@ -1,0 +1,68 @@
+@import url("resource:///org/gnome/theme/gnome-shell.css");
+
+#panel .panel-button {
+  color: #000000;
+}
+
+#panel StLabel {
+  font-weight: 500;
+}
+
+/* Text Styles */
+
+/* default text style */
+stage {
+  font-size: 15px;
+}
+
+/* Panel */
+
+#panel {
+  background-gradient-direction: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+  height: 28px;
+}
+
+.system-status-icon {
+  icon-size: 1.09em;
+  padding: 0 4px;
+}
+
+.aggregate-menu {
+  width: 300px
+    /*old=320*/
+  ;
+}
+
+.aggregate-menu .popup-menu-icon {
+  padding: 0 4px;
+}
+
+#overviewGroup {
+  background-color: #000000;
+}
+
+#panelLeft:ltr {
+  padding-right: 0px;
+}
+
+#panelLeft:rtl {
+  padding-left: 0px;
+}
+
+#panelright:ltr {
+  padding-left: 0px;
+}
+
+#panelRight:rtl {
+  padding-right: 0px;
+}
+
+#panelLeft {
+  padding-left: 12px;
+}
+
+#panelRight {
+  padding-right: 10px;
+}

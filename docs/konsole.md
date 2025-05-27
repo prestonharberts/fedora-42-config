@@ -19,7 +19,6 @@ Now, change the following settings under Configure Konsole:
 - General
   - Process and window
     - Remember window size: Off
-    - Remove window titlebar and frame: On
 - Profiles
   - Create new and name "Personal"
     - General

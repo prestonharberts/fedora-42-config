@@ -22,7 +22,7 @@ sudo dnf install gnome-tweaks -y
   - Window Focus: Focus on Hover
     - Raise Windows When Focused: On
 
-Move all the contents of `conf/tweaks/` to `.themes/` after following the instructions in `sf-font.md`, and change the following setting:
+Move the contents of `conf/tweaks/` to `.themes/` after following the instructions in `sf-font.md`, and change the following setting:
 
 Download the Mocu cursor by sevmeyer from [here](https://www.gnome-look.org/p/1526606). Unzip, and move the `Mocu-Black-Right` folder to `~/.icons/`. Create this folder if it does not already exist.
 

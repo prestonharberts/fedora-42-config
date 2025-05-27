@@ -10,8 +10,7 @@
   - Screen Blank: 10 minutes
   - Dim Screen: Off
 - Multitasking
-  - Hot Corner: Off
-  - Active Screen Edges: Off
+  - Multi-Monitor: Worksapces on primary display only
 - Appearance
   - Style
     - Choose preferred style
@@ -34,9 +33,9 @@
 - Keyboard
   - View and Customize Shortcuts
     - Close window: `Super-Q`
-    - Hide all normal windows: `Super-D`
+    - Hide all normal windows: `Super-E`
     - Hide window: `Super-S`
-    - Open the quick settings menu: `Super-A`
+    - Open the quick settings menu: `Super-M`
     - Show the notification list: `Super-N`
     - Focus the active notification: `Shift+Super+N`
     - Switch applications: `Alt-Tab`
@@ -54,13 +53,13 @@
     - Move window one workspace to the right: `Super-/`
     - Toggle fullscreen mode: `Super-F`
     - Toggle window on all workspaces or one: `Super+X`
-    - Move window to last workspace: `Super+Shift+/`
+    - Move window to last workspace: `Super-Shift-/`
     - Move window to workspace 1: Disabled
     - Switch to workspace 1: Disabled
     - Switch to last workspace: Disabled
-    - View split on left: Disabled
-    - View split on right: Disabled
-    - Toggle maximization state: Disabled
+    - View split on left: `Super-A`
+    - View split on right: `Super-D`
+    - Toggle maximization state: `Super-W`
     - Resize window: Disabled
     - Launch help browser: Disabled
     - Activate the window menu: Disabled
