@@ -389,6 +389,7 @@ Change the following settings for the Built-In extensions:
   - Write your message: `  Activities`
 - Smart Auto Move by khimaros
   - General
+    - Match Threshold: 1.00
     - Activate Workspace: Off
     - Ignore Workspce: On
   - Saved Windows
@@ -433,7 +434,7 @@ Change the following settings for the Built-In extensions:
     - Screen Edges: 8
     - Maximized Windows
   - Dynamic Keybinding Behavior
-    - Tiling State
+    - Tiling State (Windows)
   - Keybindings
     - General
       - Toggle Maximization: `Super-W`
